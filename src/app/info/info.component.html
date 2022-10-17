@@ -1,0 +1,10 @@
+<ul>
+  <li>Nom : {{ coordonnees.nom }}</li>
+  <li>Email : {{ coordonnees.email }}</li>
+  <li>Tél : {{ coordonnees.tel }}</li>
+</ul>
+<button (click)="changer()">activer et desactiver</button>
+<button [disabled]="etat">Désactivez ceci</button>
+
+<button (click)="modifText()">Mettre à jour le text </button>
+<h4>{{ txt }}<h4>

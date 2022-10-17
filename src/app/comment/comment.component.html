@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="nouveau.msg">
+<button (click)=" ajouterCommentaire()">Ajouter
+  commentaire </button>
+
+<ul>
+  <li *ngFor="let elem of tab">{{elem.msg}} id:{{elem.id}}<button (click)="delet(elem.id)">X</button></li>
+
+</ul>
