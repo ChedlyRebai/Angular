@@ -12,8 +12,8 @@ export class ListeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let data=localStorage.getItem(JSON.parse('etudiants'))
-    console.log(data+"data")
+    let data=localStorage.getItem(JSON.parse("etudiants"))
+    console.log(data)
   }
 
 }
