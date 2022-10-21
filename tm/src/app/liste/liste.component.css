@@ -1,0 +1,18 @@
+th {
+  text-transform: capitalize;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
