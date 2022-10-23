@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjouteComponent implements OnInit {
  etudiants:etudiant[] =[]
- num:number =3;
+ num:number =4;
   etudiantf={
-    id:0,
+    id:4,
     nom:'',
     prenom:'',
     classe:'',
@@ -28,16 +28,16 @@ export class AjouteComponent implements OnInit {
     classe:'',
     moyenne:0
     }
-    //console.log(this.etudiants);
-    localStorage.setItem('etudiants',JSON.stringify(this.etudiants))
+    console.log(this.etudiants);
+localStorage.setItem('etudiants',JSON.stringify(this.etudiants))
   }
 
  constructor() {
-    this.etudiants = [
-      {id : 1, nom : "Souris Wifi", prenom:"rebai", classe:"dsi"},
-      {id : 2, nom : "Souris Wifi", prenom:"rebai", classe:"dsi21"},
-      {id : 3, nom : "Souris Wifi", prenom:"rebai", classe:"dsi22"},
-    ];
+     this.etudiants = [
+       {id : 1, nom : "houssem", prenom:"hammemi", classe:"dsi21",moyenne:13},
+       {id : 2, nom : "chaima", prenom:"mbarki", classe:"dsi21",moyenne:13},
+       {id : 3, nom : "amal", prenom:"hamdi", classe:"dsi21",moyenne:9},
+     ];
   }
   ngOnInit(): void {
 

@@ -9,11 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class ListeComponent implements OnInit {
   etudiants:etudiant[] =[]
 
+datas:any;
   constructor() { }
 
+
+
+
   ngOnInit(): void {
-    let data=localStorage.getItem(JSON.parse("etudiants"))
-    console.log(data)
+    let data:any=localStorage.getItem('etudiants')
+    this.datas=JSON.parse(data)
   }
 
+  supprimer(index:number){
+
+  }
+  clear(){
+    localStorage.clear()
+    this.ngOnInit();
+  }
 }

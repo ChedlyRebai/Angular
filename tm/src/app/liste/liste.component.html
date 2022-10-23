@@ -2,6 +2,8 @@
   <div class="card shadow mb-4">
     <div class="card-body">
       <h1>Liste des etudiants</h1>
+      <h2><input type="button" class="btn btn-danger" name="supp_btn" (click)="clear()" value="supprimer">
+      </h2>
       <table width="100%">
         <thead>
           <tr>
@@ -15,12 +17,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <!--<td>{{article.codea}}</td>
-            <td>{{article.libelle | uppercase}}</td>
-            <td>{{article.prix | number : '1.3'}}</td>
-            <td>{{article.qte}}</td>
-            <td>{{article.dateAjout | date:'dd/MM/yyyy'}}</td>-->
+          <tr *ngFor="let data of datas ">
+            <td>{{data.id}}</td>
+            <td>{{data.nom}}</td>
+            <td>{{data.prenom}}</td>
+            <td>{{data.classe}}</td>
+            <td>{{data.moyenne}}</td>
+            <td>{{(data.moyenne>=10)?'admis':'refuse'}}</td>
+            <td><input type="button" class="btn btn-danger" name="supp_btn" (click)="supprimer(data.id)"
+                value="supprimer"></td>
           </tr>
         </tbody>
       </table>
