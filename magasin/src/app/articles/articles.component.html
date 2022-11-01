@@ -20,7 +20,10 @@
             <td>{{article.qte}}</td>
             <td>{{article.dateAjout | date:'dd/MM/yyyy'}}</td>
             <td>
-              <a class="btn btn-danger" (click)="suppArticle(article)">Supprimer</a>
+              <a class="btn btn-danger" (click)="suppArticle(article)"><img src="../assets/img/delete.png" alt="erreur"
+                  height="32" width="32"></a>
+              <a class="btn btn-warning" [routerLink]="['/updateArticle',article.codea]">
+                <img src="../assets/img/edit.png" alt="erreur" height="32" width="32"></a>
             </td>
           </tr>
         </tbody>

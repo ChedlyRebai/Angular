@@ -32,4 +32,12 @@ dateAjout : new Date("10/02/2022")}
     this.tab_art.splice(index, 1);
     }
    }
+   consulterArticle(id:number): Article{
+    this['article'] = this['articles'].find((art: { codea: number; }) => art.codea == id)!;
+    return this['article'];
+    }
+    modifierArticle(art: Article) {
+    this.supprimerArticle(art);
+    this.ajouterArticle(art);
+    }
 }
