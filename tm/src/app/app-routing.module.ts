@@ -9,8 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {  } from "module";
 
 const routes: Routes = [
- {path:"" ,redirectTo:'/accueil',pathMatch:"full"},
-
+  {path:"" ,redirectTo:'/accueil',pathMatch:"full"},
   {path:"ajoute",component:AjouteComponent},
   {path:'accueil',component:AcceuilComponent},
   {path :"liste" , component:ListeComponent},

@@ -12,13 +12,16 @@
             <th>Date insertion</th>
           </tr>
         </thead>
-        <tbody *ngFor="let article of articles">
+        <tbody *ngFor="let article of tab_art">
           <tr>
             <td>{{article.codea}}</td>
             <td>{{article.libelle | uppercase}}</td>
             <td>{{article.prix | number : '1.3'}}</td>
             <td>{{article.qte}}</td>
             <td>{{article.dateAjout | date:'dd/MM/yyyy'}}</td>
+            <td>
+              <a class="btn btn-danger" (click)="suppArticle(article)">Supprimer</a>
+            </td>
           </tr>
         </tbody>
       </table>

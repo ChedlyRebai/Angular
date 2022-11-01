@@ -1,28 +1,28 @@
-<div class="container center">
+<div class="container center  ">
   <form>
     <div class="form-group">
       <label for="nom">Nom</label>
-      <input [(ngModel)]="etudiantf.nom" name="nom" type="text" class="form-control" id="nom"
+      <input [(ngModel)]="newetudiant.nom" name="nom" type="text" class="form-control" id="nom"
         aria-describedby="emailHelp" placeholder="Nom">
     </div>
 
     <div class="form-group">
       <label for="prenom">Prenom</label>
-      <input [(ngModel)]="etudiantf.prenom" name="prenom" type="text" class="form-control" id="prenom"
+      <input [(ngModel)]="newetudiant.prenom" name="prenom" type="text" class="form-control" id="prenom"
         placeholder="Prenom">
     </div>
 
     <div class="form-group">
       <label for="classe">classe</label>
-      <input [(ngModel)]="etudiantf.classe" type="text" name="classe" class="form-control" id="classe"
+      <input [(ngModel)]="newetudiant.classe" type="text" name="classe" class="form-control" id="classe"
         placeholder="Classe">
     </div>
 
     <div class="form-group">
       <label for="moyenne">Moyenne</label>
-      <input [(ngModel)]="etudiantf.moyenne" type="number" name="moyenne" class="form-control" id="moyenne"
+      <input [(ngModel)]="newetudiant.moyenne" type="number" name="moyenne" class="form-control" id="moyenne"
         placeholder="Moyenne">
     </div>
-    <button type="submit" class="btn btn-dark" (click)="ajoute()">Submit</button>
+    <button type="submit" class="btn btn-dark" (click)="addArticle()">Submit</button>
   </form>
 </div>

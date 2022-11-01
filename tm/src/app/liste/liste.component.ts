@@ -1,5 +1,6 @@
 import { etudiant } from './../model/etudiant.model';
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-liste',
@@ -7,24 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste.component.css']
 })
 export class ListeComponent implements OnInit {
-  etudiants:etudiant[] =[]
-
-datas:any;
-  constructor() { }
-
-
-
-
-  ngOnInit(): void {
-    let data:any=localStorage.getItem('etudiants')
-    this.datas=JSON.parse(data)
+  tab_art : etudiant[];
+ constructor(private sharedService: SharedService ) {
+ this.tab_art = sharedService.listeArticles();
+ }
+ ngOnInit(): void {
+}
+suppArticle(art: etudiant){
+  let conf = confirm("Etes-vous sûr de vouloir supprimer cet article ?");
+  if (conf) {
+  this.sharedService.supprimerArticle(art);
+  console.log("Suppression avec succes :"+art.nom);
   }
-
-  supprimer(index:number){
-
-  }
-  clear(){
-    localStorage.clear()
-    this.ngOnInit();
   }
 }

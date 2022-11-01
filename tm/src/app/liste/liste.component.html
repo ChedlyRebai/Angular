@@ -1,13 +1,19 @@
-<div class="container">
+<div class="container d-flex align-items-center justify-content-center vh-100">
   <div class="card shadow mb-4">
     <div class="card-body">
-      <h1>Liste des etudiants</h1>
-      <h2><input type="button" class="btn btn-danger" name="supp_btn" (click)="clear()" value="supprimer">
-      </h2>
+      <div class="d-flex ">
+
+        <h1 class="col-9">Liste des etudiants</h1>
+
+
+        <!-- <h2 *ngIf="tab_art.length>0" class="col-4 "><input type="button" class="btn btn-danger" name="supp_btn"
+            (click)="clear()" value="supprimer tout">
+        </h2> -->
+      </div>
+      <!-- <div *ngIf="tab_art.length>0"> -->
       <table width="100%">
         <thead>
           <tr>
-            <th>ID</th>
             <th>nom</th>
             <th>prenom</th>
             <th>classe</th>
@@ -17,18 +23,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let data of datas ">
-            <td>{{data.id}}</td>
+          <tr *ngFor="let data of tab_art ">
+
             <td>{{data.nom}}</td>
             <td>{{data.prenom}}</td>
             <td>{{data.classe}}</td>
             <td>{{data.moyenne}}</td>
-            <td>{{(data.moyenne>=10)?'admis':'refuse'}}</td>
-            <td><input type="button" class="btn btn-danger" name="supp_btn" (click)="supprimer(data.id)"
+            <td>
+              <!-- {{(data.moyenne >= 10) ? 'admis':'refuse'}} -->
+            </td>
+            <td><input type="button" class="btn btn-danger" name="supp_btn" (click)="suppArticle(data)"
                 value="supprimer"></td>
           </tr>
         </tbody>
       </table>
+      <!-- </div> -->
     </div>
+
+
   </div>
 </div>

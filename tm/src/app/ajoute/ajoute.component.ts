@@ -1,5 +1,6 @@
 import { etudiant } from './../model/etudiant.model';
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../services/shared.service';
 
 
 @Component({
@@ -8,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ajoute.component.css']
 })
 export class AjouteComponent implements OnInit {
- etudiants:etudiant[] =[]
- num:number =4;
+ /*etudiants:etudiant[] =[]
+ num:number =0;
   etudiantf={
-    id:4,
+    id:0,
     nom:'',
     prenom:'',
     classe:'',
@@ -34,13 +35,21 @@ localStorage.setItem('etudiants',JSON.stringify(this.etudiants))
 
  constructor() {
      this.etudiants = [
-       {id : 1, nom : "houssem", prenom:"hammemi", classe:"dsi21",moyenne:13},
-       {id : 2, nom : "chaima", prenom:"mbarki", classe:"dsi21",moyenne:13},
-       {id : 3, nom : "amal", prenom:"hamdi", classe:"dsi21",moyenne:9},
+        {id : 1, nom : "houssem", prenom:"hammemi", classe:"dsi21",moyenne:13},
+        {id : 2, nom : "chaima", prenom:"mbarki", classe:"dsi21",moyenne:13},
+        {id : 3, nom : "amal", prenom:"hamdi", classe:"dsi21",moyenne:9},
      ];
   }
   ngOnInit(): void {
 
-    }
+    }*/
+
+  newetudiant = new etudiant();
+ constructor(private sharedService: SharedService ) { }
+ addArticle(){
+ this.sharedService.ajouterArticle(this.newetudiant);
+ }
+ ngOnInit(): void {
+ }
 
 }
