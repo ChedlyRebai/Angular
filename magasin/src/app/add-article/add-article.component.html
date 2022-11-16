@@ -11,6 +11,17 @@
       <label>Libellé</label>
       <input type="text" [(ngModel)]="newArticle.libelle" name="libelle" class="form-control">
     </div>
+
+    <!-- 4-B -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Categorie</label>
+      <select title="categ" class="form-control form-control-lg" id="categ" name="categ" [(ngModel)]="newCodec">
+        <option *ngFor="let cat of categories" [value]="cat.codec">
+          {{cat.nomCat}}</option>
+      </select>
+    </div>
+
+
     <div class="col-sm-2 col-md-2 col-lg-2">
       <label>Prix</label>
       <input type="number" [(ngModel)]="newArticle.prix" name="prix" class="form-control">

@@ -1,3 +1,4 @@
+import { UpdateEtudiantComponent } from './update-etudiant/update-etudiant.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { ListeComponent } from './liste/liste.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"ajoute",component:AjouteComponent},
   {path:'accueil',component:AcceuilComponent},
   {path :"liste" , component:ListeComponent},
+  {path: "updateEtudiant/:id", component: UpdateEtudiantComponent},
   {path:"**",component:ErreurComponent}
 
 

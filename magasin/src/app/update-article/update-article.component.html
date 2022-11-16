@@ -11,6 +11,16 @@
       <label>Libellé</label>
       <input type="text" [(ngModel)]="articleCourant.libelle" name="libelle" class="form-control">
     </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Categorie</label>
+      <select title="categ" class="form-control form-control-lg" id="categ" name="categ" [(ngModel)]="codecModifie">
+        <option *ngFor="let category of categories" [value]=" category.codec">
+          {{ category.nomCat}}</option>
+      </select>
+    </div>
+
+
     <div class="col-sm-2 col-md-2 col-lg-2">
       <label>Prix</label>
       <input type="number" [(ngModel)]="articleCourant.prix" name="prix" class="form-control">
@@ -22,10 +32,10 @@
     <div class="col-sm-4 col-md-4 col-lg-4">
       <label>Date d'ajout</label>
       <input type="date" [ngModel]="articleCourant.dateAjout | date:
-'yyyy-MM-dd'" (ngModelChange)=" articleCourant.dateAjout= $event" name="dateAjout" class="form-control">
+      'yyyy-MM-dd'" (ngModelChange)=" articleCourant.dateAjout= $event" name="dateAjout" class="form-control">
     </div>
     <div class="mt-2">
-      <button type="submit" (click)="modifArticle()" class="btn btnsuccess">
+      <button type="submit" (click)="modifArticle()" routerLink="/articles" class="btn btn-success">
         Modifer</button>
     </div>
   </form>

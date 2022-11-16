@@ -8,6 +8,7 @@ import { AjouteComponent } from './ajoute/ajoute.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ListeComponent } from './liste/liste.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateEtudiantComponent } from './update-etudiant/update-etudiant.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     AjouteComponent,
     AcceuilComponent,
     ListeComponent,
+    UpdateEtudiantComponent,
 
   ],
   imports: [

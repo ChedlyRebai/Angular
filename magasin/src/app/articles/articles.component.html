@@ -10,6 +10,7 @@
             <th>Prix</th>
             <th>Quantité</th>
             <th>Date insertion</th>
+            <th>Categorie</th>
           </tr>
         </thead>
         <tbody *ngFor="let article of tab_art">
@@ -19,10 +20,11 @@
             <td>{{article.prix | number : '1.3'}}</td>
             <td>{{article.qte}}</td>
             <td>{{article.dateAjout | date:'dd/MM/yyyy'}}</td>
+            <td>{{article.categ!.nomCat}}</td>
             <td>
               <a class="btn btn-danger" (click)="suppArticle(article)"><img src="../assets/img/delete.png" alt="erreur"
                   height="32" width="32"></a>
-              <a class="btn btn-warning" [routerLink]="['/updateArticle',article.codea]">
+              <a class="btn btn-warning" [routerLink]="['/updateArticle',article.codea]" routerLink="/liste">
                 <img src="../assets/img/edit.png" alt="erreur" height="32" width="32"></a>
             </td>
           </tr>

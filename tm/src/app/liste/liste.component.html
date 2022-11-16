@@ -30,7 +30,7 @@
             <td>{{data.classe}}</td>
             <td>{{data.moyenne}}</td>
             <td>
-              <!-- {{(data.moyenne >= 10) ? 'admis':'refuse'}} -->
+              {{(data.moyenne! >= 10) ? 'admis':'refuse'}}
             </td>
             <td><input type="button" class="btn btn-danger" name="supp_btn" (click)="suppArticle(data)"
                 value="supprimer"></td>
