@@ -25,7 +25,7 @@
         <tbody>
           <tr *ngFor="let data of tab_art ">
 
-            <td>{{data.nom}}</td>
+            <td>{{data.nom}} {{data.id}}</td>
             <td>{{data.prenom}}</td>
             <td>{{data.classe}}</td>
             <td>{{data.moyenne}}</td>
@@ -33,7 +33,10 @@
               {{(data.moyenne! >= 10) ? 'admis':'refuse'}}
             </td>
             <td><input type="button" class="btn btn-danger" name="supp_btn" (click)="suppArticle(data)"
-                value="supprimer"></td>
+                value="supprimer">
+              <a class="btn btn-warning" [routerLink]="['/updateEtudiant',data.id]">
+                <img src="../assets/img/edit.png" height="32" width="32" alt="erreur"></a>
+            </td>
           </tr>
         </tbody>
       </table>

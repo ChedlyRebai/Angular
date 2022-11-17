@@ -1,3 +1,4 @@
+import { etudiant } from './../etudiant/etudiant.model';
 import { etudiant } from './../model/etudiant.model';
 import { Injectable } from '@angular/core';
 
@@ -32,4 +33,13 @@ export class SharedService {
     this.tab_art.splice(index, 1);
     }
    }
+
+   consulterArticle(id:number): etudiant{
+    this.etudiant = this.tab_art.find(art => art.id == id)!;
+    return this.etudiant;
+    }
+    modifierArticle(art: etudiant) {
+    this.supprimerArticle(art);
+    this.ajouterArticle(art);
+    }
 }
