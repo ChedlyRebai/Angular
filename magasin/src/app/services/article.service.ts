@@ -66,9 +66,24 @@ dateAjout : new Date("10/02/2022"), categ:{codec : 3, nomCat :
     listeCategories():Categorie[] {
       return this.categories;
       }
-      consulterCategorie(id:number): Categorie{
-      return this.categories.find(cat => cat.codec == id)!;
-      }
+
+    consulterCategorie(id:number): Categorie{
+    return this.categories.find(cat => cat.codec == id)!;
+    }
 
 
+    calculNbArticles(): number{
+      return this.tab_art.length;
+    }
+
+    calculTotalStock(): number{
+      let tot=0;
+      this.tab_art.forEach( (art) => {
+      tot += art.prix! * art.qte!;
+      })
+      return tot;
+    }
+    calculNbCategories(): number{
+      return this.categories.length;
+    }
 }

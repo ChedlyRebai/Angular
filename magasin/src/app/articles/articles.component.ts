@@ -13,6 +13,8 @@ export class ArticlesComponent implements OnInit {
  }
  ngOnInit(): void {
 }
+
+zeroStyle = {'color':'red'};
 suppArticle(art: Article){
   let conf = confirm("Etes-vous sûr de vouloir supprimer cet article ?");
   if (conf) {
